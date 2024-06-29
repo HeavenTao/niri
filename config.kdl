@@ -202,7 +202,8 @@ layout {
 // Note that running niri as a session supports xdg-desktop-autostart,
 // which may be more convenient to use.
 // spawn-at-startup "alacritty" "-e" "fish"
-spawn-at-startup "hyprpaper"
+spawn-at-startup "hyprpaper -c /home/ht/.config/niri/hyprpaper.conf"
+spawn-at-startup "fcitx5"
 
 // Uncomment this line to ask the clients to omit their client-side decorations if possible.
 // If the client will specifically ask for CSD, the request will be honored.
@@ -246,7 +247,7 @@ window-rule {
 }
 
 window-rule {
-    match app-id="kitty"
+    match app-id="alacritty"
     default-column-width { proportion 0.75; }
 }
 
@@ -282,7 +283,7 @@ binds {
     Mod+Shift+Slash { show-hotkey-overlay; }
 
     // Suggested binds for running programs: terminal, app launcher, screen locker.
-    Mod+Return { spawn "kitty"; }
+    Mod+Return { spawn "alacritty"; }
     Mod+P { spawn "fuzzel"; }
     // The quit action will show a confirmation dialog to avoid accidental exits.
     Mod+Shift+E { quit; }
