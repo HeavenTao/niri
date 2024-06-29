@@ -202,7 +202,7 @@ layout {
 // Note that running niri as a session supports xdg-desktop-autostart,
 // which may be more convenient to use.
 // spawn-at-startup "alacritty" "-e" "fish"
-spawn-at-startup "hyprpaper -c /home/ht/.config/niri/hyprpaper.conf"
+spawn-at-startup "hyprpaper" "-c" "/home/ht/.config/niri/hyprpaper.conf"
 spawn-at-startup "fcitx5"
 
 // Uncomment this line to ask the clients to omit their client-side decorations if possible.
