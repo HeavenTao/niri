@@ -251,10 +251,6 @@ window-rule {
     default-column-width { proportion 0.75; }
 }
 
-window-rule {
-    match app-id=""
-}
-
 // Example: block out two password managers from screen capture.
 // (This example rule is commented out with a "/-" in front.)
 /-window-rule {
@@ -265,6 +261,10 @@ window-rule {
 
     // Use this instead if you want them visible on third-party screenshot tools.
     // block-out-from "screencast"
+}
+
+hotkey-overlay {
+    skip-at-startup
 }
 
 binds {
