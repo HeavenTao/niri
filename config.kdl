@@ -98,7 +98,7 @@ output "DVI-D-1" {
 // https://github.com/YaLTeR/niri/wiki/Configuration:-Layout
 layout {
     // Set gaps around windows in logical pixels.
-    gaps 13
+    gaps 5
 
     // When to center a column when changing focus, options are:
     // - "never", default behavior, focusing an off-screen column will keep at the left
@@ -247,12 +247,13 @@ window-rule {
 }
 
 window-rule {
-    match app-id="alacritty"
-    default-column-width { proportion 0.75; }
+    match app-id="Alacritty"
+    open-maximized true
 }
 
 window-rule {
-    match app-id=""
+    match app-id="firefox"
+    open-maximized true
 }
 
 // Example: block out two password managers from screen capture.
@@ -489,4 +490,8 @@ binds {
     // Powers off the monitors. To turn them back on, do any input like
     // moving the mouse or pressing any other key.
     //Mod+Shift+P { power-off-monitors; }
+}
+
+hotkey-overlay {
+    skip-at-startup
 }
