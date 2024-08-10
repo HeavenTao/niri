@@ -250,6 +250,7 @@ window-rule {
 window-rule {
     match app-id="Alacritty"
     match app-id="firefox"
+    match app-id="chrome"
     open-maximized true
 }
 // Example: block out two password managers from screen capture.
